@@ -4,7 +4,7 @@ metadata:
   name: task-manager-deployment
   namespace: task-manager
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: task-manager
