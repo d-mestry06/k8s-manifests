@@ -14,7 +14,13 @@ spec:
         app: task-manager
     spec:
       containers:
-        - name: task-manager
-          image: dmestry06/task-manager-app:latest
-          ports:
-            - containerPort: 80
+      - name: task-manager
+        image: dmestry06/task-manager-app:latest
+        ports:
+        - containerPort: 80
+
+        envFrom:
+        - configMapRef:
+            name: task-manager-config
+        - secretRef:
+            name: task-manager-secret
